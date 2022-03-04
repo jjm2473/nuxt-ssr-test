@@ -46,7 +46,7 @@ export default {
   build: {
   },
 
-  ssr: true,
+  ssr: process.env.NODE_ENV !== 'development',
 
   serverMiddleware: [
     { path: '/api', handler: '~/api/express.js' },
